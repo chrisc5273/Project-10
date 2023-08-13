@@ -1,8 +1,10 @@
 *{
-    color: white;
+  color: white;
     font-family: 'Belanosima', sans-serif;
 font-family: 'Oswald', sans-serif;
+
 }
+
 .mycontainer{
     display: grid;
     grid-template-areas: 'header header header'
@@ -10,55 +12,203 @@ font-family: 'Oswald', sans-serif;
                           'footer footer footer';
     background-color: black;
 }
+.mouse-clickContainer{
+  max-width: 430px;
+  display: flex;
+  flex-wrap: wrap;
+   background-color: grey;
+   justify-content: center;
+   margin-top: 400px;
+   
+   
+}
+.mouse-clickContainer > div{
+height:80px;
+width: 80px;
+background-color: #2196f3;
+margin: 10px;
 
+}
 
-
-
+#myInput{
+  width:45rem;
+  
+}
 .header{
-    grid-area: header;
-    height: 10vh;
-    padding:20px ;
-    overflow: visible;
-    background-color: #333;
-    display: flex;
-   justify-content: flex-start;
+    
+  grid-area: header;
+  height: 15vh;
+
+  overflow: visible;
+  background-color: #333;
+  display: inline-flex;
+ justify-content: flex-start;
+
 }
 .main{
+  padding-top: 6rem;
     grid-area: main;
-    height:40rem; padding: 4rem;
+   height: 200rem;
+   width: 1fr;
     background-color: bisque;
     display: flex;
-    justify-content: space-evenly;
+ flex-direction: column;
+ align-items: center;
+    animation: fadeInRight ease-in 1s;
+    row-gap: 20rem;
 }
+
 .footer{
-    grid-area: footer;
-    height: 10vh;
-    background-color: aqua;
-    display: flex;
-    width: 100%;
-    place-content: center;
-    gap: 1rem;
-    text-align: center;
+  grid-area: footer;
+  height: 10vh;
+  background-color: aqua;
+  display: flex;
+  width: 100%;
+  place-content: center;
+  gap: 1rem;
+  text-align: center;
+  animation: FadeInRight  ease-in 1s;
 }
+
+
+#task-list{
+  display:flex;
+ 
+  height: fit-content;
+  flex-direction:column;
+background-color: #090a0a;
+}
+
+ul {
+ 
+  
+  background-color: #070808;
+  height: fit-content;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #4f2267;
+  font-size: 30px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #030303;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #6a5959;
+  color: rgb(249, 244, 244);
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+#myUL{
+width: 50%;
+padding-left: 10rem;
+}
+
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+
+
+/* Style the input */
+.main input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  color: black;
+  height: 10rem;
+  width: 25%;
+  padding: 10px;
+
+  font-size: 36px;
+}
+
+/* Style the "Add" button */
+.main .addBtn {
+  padding: 10px;
+  width: 200px;
+  height: 4rem;
+  background: #3ae1ca;
+  color: #555;
+  display: flex;
+
+
+  text-align: center;
+  font-size: 36px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
 
 
   
 .header a {
-   
-  color: #f2f2f2;
-  text-align: center;
-  padding: 65px 76px;
-  text-decoration: none;
-  font-size: 30px;
-}
-
-.header a:hover {
-  background-color: #ddd;
-  color: rgb(182, 61, 88);
-  transition: ease-in .5s;
-  font-size: 32px;
-
-}
+    padding: 6vh 9vh;
+    color: #f2f2f2;
+    text-align: center;
+ display: inline-flex;
+ 
+    text-decoration: none;
+    font-size: 25px;
+  }
+  
+  .header a:hover {
+    background-color: #ddd;
+    color: rgb(182, 61, 88);
+    transition: ease-in .5s;
+    font-size: 26px;
+  
+  }
 
 /*this it the beginning of the color changer*/
  
@@ -66,7 +216,7 @@ font-family: 'Oswald', sans-serif;
   
   .dark-mode {
     background-color: #333;
-    color: #f0f0f0;
+    color: #0e0d0d;
     transition: all 0.4s ease-in;
   }
   
@@ -128,3 +278,15 @@ font-family: 'Oswald', sans-serif;
     transform: translateX(1.63rem);
   }
   /*this is the end of the color changer code*/
+
+  @keyframes FadeInRight{
+    from{
+      opacity: 0;
+      transform: translatex(100%);
+     
+    }
+    to{
+      opacity: 1;
+     
+    }
+  }
